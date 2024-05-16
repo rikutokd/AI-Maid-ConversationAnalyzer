@@ -10,9 +10,11 @@ def resize_image(input_image_path, output_image_path, size):
 # 画像のリサイズ
 resize_image('./images/play.png', './images/play_resized.png', (70, 50))
 resize_image('./images/stop.png', './images/stop_resized.png', (40, 40))
+resize_image('./images/maid.png', './images/maid_resized.png', (400, 400))
 
 # レイアウト
 layout = [
+    [sg.Image(filename='./images/maid_resized.png', key='-IMAGE-')],
     [sg.Image(filename='./images/play_resized.png', key='-PLAY-', enable_events=True), 
      sg.Image(filename='./images/stop_resized.png', key='-STOP-', enable_events=True)]
 ]
